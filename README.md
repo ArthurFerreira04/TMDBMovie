@@ -2,6 +2,8 @@
 
 App iOS de portfólio para explorar **filmes e séries** com a [API TMDB v3](https://developer.themoviedb.org/docs). O foco é demonstrar engenharia iOS sólida: **UIKit + ViewCode**, arquitetura **MVVM-C**, integração REST, concorrência moderna, design system e testes unitários — sem depender de Storyboards na UI principal.
 
+![iOS Build](https://github.com/ArthurFerreira04/TMDBMovie/actions/workflows/ios.yml/badge.svg)
+
 ---
 
 ## Visão geral
@@ -31,13 +33,13 @@ Construir um app de catálogo cinematográfico com experiência premium, código
 
 ## Screenshots
 
-> Adicione capturas em `docs/screenshots/` e referencie aqui antes de publicar.
+| Splash | Home |
+|:------:|:----:|
+| ![Splash](docs/screenshots/splash.png) | ![Home](docs/screenshots/home.png) |
 
-| Splash | Home | Detalhe | Favoritos |
-|:------:|:----:|:-------:|:---------:|
-| _em breve_ | _em breve_ | _em breve_ | _em breve_ |
-
-Sugestão de nomes: `splash.png`, `home-movies.png`, `description-movie.png`, `favorites.png`.
+| Detalhe (hero) | Detalhe (seções) | Favoritos |
+|:--------------:|:----------------:|:---------:|
+| ![Detalhe — hero e sinopse](docs/screenshots/description-hero.png) | ![Detalhe — providers, elenco e recomendações](docs/screenshots/description-sections.png) | ![Favoritos](docs/screenshots/favorites.png) |
 
 ---
 
@@ -327,7 +329,7 @@ Badge (após push para `main`):
 
 ## Próximos passos possíveis
 
-- [ ] Screenshots e GIF da Splash no README
+- [x] Screenshots da Splash, Home, Detalhe e Favoritos no README
 - [ ] Pin de Xcode no CI para rodar os 35 testes no GitHub Actions
 - [ ] Testes de snapshot UI (opcional)
 - [ ] Localização (pt-BR / en)
@@ -341,11 +343,11 @@ Badge (após push para `main`):
 
 - [ ] `Secrets.xcconfig` **não** está no commit
 - [ ] `Secrets.xcconfig.example` está no repositório
-- [ ] Screenshots adicionadas em `docs/screenshots/`
+- [x] Screenshots adicionadas em `docs/screenshots/`
 - [ ] Build OK no Xcode
 - [ ] 35/35 testes passando (`Cmd + U`)
 - [ ] App abre Splash → Home com dados reais da API
-- [ ] README com URL do repositório e badge de CI atualizados
+- [x] README com URL do repositório e badge de CI atualizados
 
 ---
 
