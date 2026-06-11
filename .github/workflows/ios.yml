@@ -1,0 +1,28 @@
+# Build-only CI: validates compilation without real TMDB credentials.
+# Unit tests (35) should be run locally — see README for xcodebuild test command.
+name: iOS
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure API secrets for build
+        run: cp "TMDB Movie/Secrets.xcconfig.example" "TMDB Movie/Secrets.xcconfig"
+
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild build \
+            -scheme "TMDB Movie" \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath .derivedData \
+            CODE_SIGNING_ALLOWED=NO

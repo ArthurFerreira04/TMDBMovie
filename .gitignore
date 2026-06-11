@@ -1,0 +1,24 @@
+.DS_Store
+*.swp
+*~
+
+# Xcode user-specific files
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcbkptlist
+*.xcscmblueprint
+
+# Local secrets (never commit)
+TMDB Movie/Secrets.xcconfig
+**/Secrets.xcconfig
+!**/Secrets.xcconfig.example
+
+# Build artifacts
+.derivedData/
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.hmap
+*.moved-aside
